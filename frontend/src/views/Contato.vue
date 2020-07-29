@@ -4,7 +4,7 @@
             Carregando...   
         </div>
         <div v-if="apicursos">
-            <h1>Home</h1>
+            <h1>Contato</h1>
             <p>{{apicursos}}</p>
         </div>
     </div>
@@ -13,15 +13,14 @@
 <script>
 import apiCursos from '@/mixins/apiCursos.js';
 export default {
-    name: 'home',
+    name: 'contato',
     mixins: [apiCursos],
     created(){
-        this.apiCursos("/home");
+        this.apiCursos("/contato");
     }
-    
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
