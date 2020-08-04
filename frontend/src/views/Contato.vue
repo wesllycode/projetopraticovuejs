@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="loading">
-            Carregando...   
+            <PageLoading/>  
         </div>
         <div v-if="apicursos">
             <h1>Contato</h1>
