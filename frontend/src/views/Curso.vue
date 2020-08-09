@@ -11,10 +11,14 @@
                 <h2>Aulas</h2>
                     <ul class="aulas">
                         <li v-for="aula in apicursos.aulas" :key="aula.id">
-                           {{aula.nome}}                    
+                           <router-link :to="{name: 'aula', params:{aula: aula.id}}">{{aula.nome}}</router-link>                  
                         </li>
                     </ul>
             </div>
+            <!-- 
+                Esse router view so é ativado quando ele tem filho no router
+            -->
+            <router-view></router-view>
         </div>
         </transition>   
     </div>
@@ -35,7 +39,7 @@ export default {
 </script>
 
 <style>
-.aulas li{
+.aulas li a{
     display: block;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
     background: white;
@@ -43,5 +47,10 @@ export default {
     margin-bottom: 10px;
     border-radius:4px;
 
+}
+
+.aulas li a.router-link-active{
+    background: #4b8;
+    color: #fff;
 }
 </style>
