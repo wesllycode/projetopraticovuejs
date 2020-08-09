@@ -13,6 +13,7 @@ export default {
             fetch(`http://localhost:3000${url}`)
             .then(r => r.json())
             .then(r => {
+                // Isso aqui tiro essa parte, só fiz para testar questão do loading da requisição
                 setTimeout(() => {
                     this.apicursos = r;
                     this.loading = false;

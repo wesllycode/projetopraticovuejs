@@ -9,7 +9,7 @@
                 <h1>{{apicursos.titulo}}</h1>
                 <p>{{apicursos.descricao}}</p>
             </div>
-            <ul>
+            <ul class="cursos-lista">
                 <li v-for="curso in apicursos.cursos" :key="curso.nome">
                     <h2>
                         <router-link 
@@ -38,5 +38,7 @@ mixins: [apiCursos],
 
 </script>
 <style scoped>
-
+.cursos-lista li{
+    margin-bottom:40px;
+}
 </style>
